@@ -1,5 +1,5 @@
 from django.utils.http import urlquote
-from django.http import HttpResponseRedirect, Http404
+from django.http import HttpResponsePermanentRedirect, Http404
 
 
 class RedirectsMiddleware(object):
@@ -14,6 +14,6 @@ class RedirectsMiddleware(object):
             host = host[4:]
 
         if host in self.redirects:
-            return HttpResponseRedirect(self.redirects[host])
+            return HttpResponsePermanentRedirect(self.redirects[host])
 
         raise Http404()
