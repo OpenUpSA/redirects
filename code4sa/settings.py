@@ -25,35 +25,17 @@ if DEBUG:
 else:
     SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
-# XXX set me
-GOOGLE_ANALYTICS_ID = set this to something
-
 ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = (
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'django_assets',
     'django_extensions',
-
-    'code4sa',
 )
 
 MIDDLEWARE_CLASSES = (
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'code4sa.middleware.RedirectsMiddleware',
 )
 
 ROOT_URLCONF = 'code4sa.urls'
@@ -86,46 +68,9 @@ USE_TZ = True
 # Templates
 TEMPLATE_DEBUG = DEBUG
 TEMPLATE_CONTEXT_PROCESSORS = (
-    "django.contrib.auth.context_processors.auth",
-    "django.core.context_processors.debug",
-    "django.core.context_processors.i18n",
-    "django.core.context_processors.media",
-    "django.core.context_processors.static",
-    "django.core.context_processors.tz",
-    "django.contrib.messages.context_processors.messages",
-    "code4sa.context_processors.google_analytics",
     )
 
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/1.7/howto/static-files/
-
-ASSETS_DEBUG = DEBUG
-ASSETS_URL_EXPIRE = False
-
-# assets must be placed in the 'static' dir of your Django app
-
-# where the compiled assets go
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-# the URL for assets
-STATIC_URL = '/static/'
-
-STATICFILES_FINDERS = (
-   "django.contrib.staticfiles.finders.FileSystemFinder",
-   "django.contrib.staticfiles.finders.AppDirectoriesFinder",
-   "django_assets.finders.AssetsFinder"
-)
-
-import scss
-scss.config.LOAD_PATHS = [
-        os.path.join(BASE_DIR, 'code4sa', 'static'),
-        os.path.join(BASE_DIR, 'code4sa', 'static', 'bower_components'),
-        ]
-
-# Simplified static file serving.
-# https://warehouse.python.org/project/whitenoise/
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 # Logging
 LOGGING = {
