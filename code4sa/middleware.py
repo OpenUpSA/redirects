@@ -6,6 +6,7 @@ class RedirectsMiddleware(object):
     redirects = {
         # domain (without www.) -> full new URL
         'living-wage.co.za': 'http://living-wage.news24.com/wageCalc.html',
+        'livingwagestory.code4sa.org': 'http://living-wage.news24.com/',
     }
 
     def process_request(self, request):
