@@ -1,5 +1,5 @@
 from django.utils.http import urlquote
-from django.http import HttpResponsePermanentRedirect, Http404
+from django.http import HttpResponse, HttpResponsePermanentRedirect, Http404
 
 
 class RedirectsMiddleware(object):
@@ -15,5 +15,8 @@ class RedirectsMiddleware(object):
 
         if host in self.redirects:
             return HttpResponsePermanentRedirect(self.redirects[host])
+
+        if request.path == '/ping':
+            return HttpResponse('pong')
 
         raise Http404()
