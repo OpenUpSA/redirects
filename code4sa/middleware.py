@@ -5,8 +5,10 @@ from django.http import HttpResponse, HttpResponsePermanentRedirect, Http404
 class RedirectsMiddleware(object):
     redirects = {
         # domain (without www.) -> full new URL
-        'living-wage.co.za': 'http://living-wage.news24.com/wageCalc.html',
-        'livingwagestory.code4sa.org': 'http://living-wage.news24.com/',
+
+        # TO: livingwage.code4sa.org
+        'living-wage.code4sa.org': 'http://livingwage.code4sa.org/',
+        'livingwagestory.code4sa.org': 'http://livingwage.code4sa.org/',
     }
 
     def process_request(self, request):
