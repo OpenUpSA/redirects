@@ -1,5 +1,5 @@
-from django.utils.http import urlquote
 from django.http import HttpResponse, HttpResponsePermanentRedirect, Http404
+import newrelic.agent
 
 
 class RedirectsMiddleware(object):
@@ -20,6 +20,7 @@ class RedirectsMiddleware(object):
             return HttpResponsePermanentRedirect(self.redirects[host])
 
         if request.path == '/ping':
+            newrelic.agent.ignore_transaction()
             return HttpResponse('pong')
 
         raise Http404()
