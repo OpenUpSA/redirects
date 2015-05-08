@@ -3,6 +3,8 @@ Werkzeug==0.10.1
 dj-database-url==0.3.0
 django-extensions==1.5.0
 enum34==1.0.4
+gevent==1.0.1
+greenlet==0.4.5
 gunicorn==19.2.1
 newrelic==2.46.0.37
 pathlib==1.0.1
