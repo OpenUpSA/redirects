@@ -16,17 +16,21 @@ You will need:
 * a New Relic license key
 * a cool app name
 
+Create the app on dokku
+
+Set configs:
+
 ```bash
-heroku create
-heroku addons:add heroku-postgresql
-heroku config:set DJANGO_DEBUG=false \
-                  DISABLE_COLLECTSTATIC=1 \
+dokku config:set redirects DJANGO_DEBUG=false \
                   DJANGO_SECRET_KEY=some-secret-key \
                   NEW_RELIC_APP_NAME=cool app name \
                   NEW_RELIC_LICENSE_KEY=new relic license key
-git push heroku master
-heroku run python manage.py migrate
-heroku run python manage.py createsuperuser
+
+git remote add dokku dokku@dokku.code4sa.org:<app_name>
+git push dokku
+
+dokku run <app_name> python manage.py migrate
+dokku run <app_name> python manage.py createsuperuser
 ```
 
 License
