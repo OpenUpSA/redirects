@@ -9,6 +9,7 @@ class RedirectsMiddleware(object):
         # TO: livingwage.code4sa.org
         'living-wage.code4sa.org': 'http://livingwage.code4sa.org/',
         'livingwagestory.code4sa.org': 'http://livingwage.code4sa.org/',
+        'maps.code4sa.org': 'http://mapit.code4sa.org/',
     }
 
     def process_request(self, request):
