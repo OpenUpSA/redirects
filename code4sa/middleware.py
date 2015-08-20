@@ -6,10 +6,12 @@ class RedirectsMiddleware(object):
     redirects = {
         # domain (without www.) -> full new URL
 
-        # TO: livingwage.code4sa.org
         'living-wage.code4sa.org': 'http://livingwage.code4sa.org/',
         'livingwagestory.code4sa.org': 'http://livingwage.code4sa.org/',
         'maps.code4sa.org': 'http://mapit.code4sa.org/',
+
+        'compliancetracker.org.za': 'http://muni.compliancetracker.org.za/',
+        'www.compliancetracker.org.za': 'http://muni.compliancetracker.org.za/',
     }
 
     def process_request(self, request):
