@@ -13,8 +13,8 @@ class RedirectsMiddleware(object):
         'compliancetracker.org.za': 'http://muni.compliancetracker.org.za/',
 
         'wazimap.org': 'http://wazimap.co.za',
-        'wazimap.net': 'http://wazimap.co.za',
         'wazimap.com': 'http://wazimap.co.za',
+        'wazimap.info': 'http://wazimap.co.za',
     }
 
     def process_request(self, request):
