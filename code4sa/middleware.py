@@ -15,6 +15,11 @@ class RedirectsMiddleware(object):
         'wazimap.org': 'http://wazimap.co.za',
         'wazimap.com': 'http://wazimap.co.za',
         'wazimap.info': 'http://wazimap.co.za',
+
+        'info.speakupmzansi.org.za': 'http://speakupmzansi.org.za',
+        'speakupmzansi.co.za': 'http://speakupmzansi.org.za',
+        'speakupmzansi.org': 'http://speakupmzansi.org.za',
+        'speakup.org.za': 'http://speakupmzansi.org.za',
     }
 
     def process_request(self, request):
