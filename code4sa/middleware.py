@@ -20,6 +20,9 @@ class RedirectsMiddleware(object):
         'speakupmzansi.co.za': 'http://speakupmzansi.org.za',
         'speakupmzansi.org': 'http://speakupmzansi.org.za',
         'speakup.org.za': 'http://speakupmzansi.org.za',
+
+        # this redirects www -> non-www
+        'vote4thebudget.org': 'http://vote4thebudget.org',
     }
 
     def process_request(self, request):
