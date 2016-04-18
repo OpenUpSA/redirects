@@ -21,6 +21,8 @@ class RedirectsMiddleware(object):
         'speakupmzansi.org': 'http://speakupmzansi.org.za',
         'speakup.org.za': 'http://speakupmzansi.org.za',
 
+        'hackforwater.org.za': 'http://www.hack4water.org.za',
+
         # this redirects www -> non-www
         'vote4thebudget.org': 'http://vote4thebudget.org',
 
