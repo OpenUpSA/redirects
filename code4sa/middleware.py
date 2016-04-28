@@ -28,6 +28,8 @@ class RedirectsMiddleware(object):
 
         # this redirects non-www -> www
         'hack4water.org.za': 'http://www.hack4water.org.za',
+
+        'municipal-finance.code4sa.org': 'http://data.municipalmoney.org.za',
     }
 
     def process_request(self, request):
