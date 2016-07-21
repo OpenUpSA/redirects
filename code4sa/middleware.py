@@ -25,6 +25,7 @@ class RedirectsMiddleware(object):
 
         # this redirects www -> non-www
         'vote4thebudget.org': 'http://vote4thebudget.org',
+        'storycheck.co.za': 'http://storycheck.co.za',
 
         # this redirects non-www -> www
         'hack4water.org.za': 'http://www.hack4water.org.za',
