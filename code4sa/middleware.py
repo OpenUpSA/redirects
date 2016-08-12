@@ -28,6 +28,7 @@ class RedirectsMiddleware(object):
         'municipalmoney.gov.za': 'https://municipalmoney.gov.za',
         'municipaldata.treasury.gov.za': 'https://municipaldata.treasury.gov.za',
         'youthexplorer.org.za': 'http://youthexplorer.org.za',
+        'youthexplorer.code4sa.org': 'http://youthexplorer.org.za',
 
         # this redirects non-www -> www
         'hack4water.org.za': 'http://www.hack4water.org.za',
