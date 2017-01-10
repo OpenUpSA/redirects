@@ -25,8 +25,6 @@ class RedirectsMiddleware(object):
 
         # this redirects www -> non-www
         'vote4thebudget.org': 'http://vote4thebudget.org',
-        'municipalmoney.gov.za': 'https://municipalmoney.gov.za',
-        'municipaldata.treasury.gov.za': 'https://municipaldata.treasury.gov.za',
         'youthexplorer.org.za': 'http://youthexplorer.org.za',
         'youthexplorer.code4sa.org': 'http://youthexplorer.org.za',
 
