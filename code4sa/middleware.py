@@ -34,6 +34,9 @@ class RedirectsMiddleware(object):
 
         # this redirects non-www -> www
         'hack4water.org.za': 'http://www.hack4water.org.za',
+
+        # this redirects old domains -> new domains
+        'cbm.code4sa.org': 'cbm.blacksash.org.za',
     }
 
     def process_request(self, request):
