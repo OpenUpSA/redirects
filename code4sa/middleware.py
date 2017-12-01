@@ -29,6 +29,8 @@ class RedirectsMiddleware(object):
         'municipaldata.treasury.gov.za': 'https://municipaldata.treasury.gov.za',
         'youthexplorer.org.za': 'https://youthexplorer.org.za',
         'youthexplorer.code4sa.org': 'https://youthexplorer.org.za',
+        'budgetportal.openup.org.za': 'http://budgetportal.openup.org.za',
+        'budgetdata.openup.org.za': 'http://budgetdata.openup.org.za',
 
         'beta.youthexplorer.org.za': 'https://youthexplorer.org.za',
 
