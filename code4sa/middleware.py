@@ -22,6 +22,7 @@ class RedirectsMiddleware(object):
         'speakup.org.za': 'http://speakupmzansi.org.za',
 
         'hackforwater.org.za': 'http://www.hack4water.org.za',
+        'indigo.code4sa.org': 'https://indigo.africanlii.org',
 
         # this redirects www -> non-www
         'vote4thebudget.org': 'http://vote4thebudget.org',
