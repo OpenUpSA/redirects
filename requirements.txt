@@ -1,5 +1,5 @@
 Django==1.7.5
-Werkzeug==0.10.1
+Werkzeug==2.2.3
 dj-database-url==0.3.0
 django-extensions==1.5.0
 enum34==1.0.4
